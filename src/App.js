@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home";
 import Offer from "./containers/Offer";
 import Header from "./components/Header";
+import SignUp from "./containers/SignUp";
+import Login from "./containers/Login";
 
 function App() {
   return (
@@ -11,6 +13,12 @@ function App() {
       <Router>
         <Header />
         <Switch>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
           <Route path="/offer/:id">
             <Offer />
           </Route>

@@ -26,9 +26,8 @@ const Home = () => {
 
       <div className="board">
         <p>Prêt à faire du tri dans vos placards ?</p>
-        <Link to="/offer/:id">
-          <button>Commencer à vendre</button>
-        </Link>
+
+        <button>Commencer à vendre</button>
       </div>
       <div className="presentation">
         {data.offers.map((offer, index) => {
