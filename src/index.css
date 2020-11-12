@@ -1,3 +1,5 @@
+/* GENERAL RULES */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +12,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* HOME CSS */
+
+img {
+  object-fit: cover; /* garde les proportions en couvrant l'intégralité des dimensions `width` et `height` */
+  object-position: center;
+}
+
+.presentation {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.presentation2 {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.board {
+  border: 2px solid black;
+  width: 540px;
+  height: 360px;
 }

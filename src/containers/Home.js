@@ -10,6 +10,7 @@ const Home = () => {
     const response = await axios.get(
       "https://lereacteur-vinted-api.herokuapp.com/offers"
     );
+    console.log(response.data);
     setData(response.data);
     setIsLoading(false);
   };
@@ -21,7 +22,7 @@ const Home = () => {
     <span>En cours de chargement...</span>
   ) : (
     <div>
-      <img style={{ height: 455, width: "100%" }} alt="pic" src={pic} />
+      <img style={{ height: 615, width: "100%" }} alt="pic" src={pic} />
 
       <div className="board">
         <p>Prêt à faire du tri dans vos placards ?</p>
@@ -29,8 +30,28 @@ const Home = () => {
           <button>Commencer à vendre</button>
         </Link>
       </div>
-      <div className="offer">
-        <h3>{data.product_name}</h3>
+      <div className="presentation">
+        {data.offers.map((offer, index) => {
+          return (
+            <div className="presentation2" key={index}>
+              <span>
+                <img
+                  style={{ height: 50, width: 50, borderRadius: 25 }}
+                  alt={offer.owner.account.username}
+                  src={offer.owner.account.avatar.url}
+                />
+                {offer.owner.account.username}
+              </span>
+
+              <img
+                style={{ height: 476, width: 310 }}
+                alt={offer.product_name}
+                src={offer.product_image.url}
+              />
+              <span>{offer.product_price} €</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
