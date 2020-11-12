@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import pic from "../assets/img/boardpic.jpeg";
+import axios from "axios";
 
-const Home = ({ data }) => {
-  return (
+const Home = () => {
+  const [data, setData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const fetchData = async () => {
+    const response = await axios.get(
+      "https://lereacteur-vinted-api.herokuapp.com/offers"
+    );
+    setData(response.data);
+    setIsLoading(false);
+  };
+  useEffect(() => {
+    console.log("rentre dans le use effect !!!");
+    fetchData();
+  }, []);
+  return isLoading ? (
+    <span>En cours de chargement...</span>
+  ) : (
     <div>
       <img style={{ height: 455, width: "100%" }} alt="pic" src={pic} />
 
