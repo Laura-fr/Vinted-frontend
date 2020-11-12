@@ -43,11 +43,13 @@ const Home = () => {
                 {offer.owner.account.username}
               </span>
 
-              <img
-                style={{ height: 476, width: 310 }}
-                alt={offer.product_name}
-                src={offer.product_image.url}
-              />
+              <Link to={`/offer/${offer._id}`}>
+                <img
+                  style={{ height: 476, width: 310 }}
+                  alt={offer.product_name}
+                  src={offer.product_image.url}
+                />
+              </Link>
               <span>{offer.product_price} €</span>
             </div>
           );
