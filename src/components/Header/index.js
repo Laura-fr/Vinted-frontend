@@ -5,6 +5,7 @@ import "./index.css";
 const Header = () => {
   return (
     <div>
+      {/* <img alt="logo" src={logo} /> */}
       <button>S'inscrire</button>
       <button>Se connecter</button>
       <button>Vends tes articles</button>
