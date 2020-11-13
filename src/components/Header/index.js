@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <div className="header">
       <Link to="/">
-        <img alt="Peugeot 508" src="/logovinted.png" />
+        <img alt="logo" src="/logovinted.png" />
       </Link>
-      <input type="text" placeholder="Recherche des articles"></input>
+      <input type="text" placeholder="  Recherche des articles"></input>
       <Link to="/signup">
         <button>S'inscrire</button>
       </Link>

@@ -20,8 +20,40 @@ img {
   object-fit: cover; /* garde les proportions en couvrant l'intégralité des dimensions `width` et `height` */
   object-position: center;
 }
+.board {
+  width: 400px;
+  height: 260px;
+  top: 190px;
+  left: 310px;
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  font-size: 34px;
+}
+.board p {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+.board button {
+  height: 45px;
+  width: 190px;
+  margin-left: 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #37aeb7;
+  color: white;
+  font-size: 16px;
+}
 
 .presentation {
+  margin: 0 auto;
+  width: 1350px;
   display: flex;
 
   flex-wrap: wrap;
@@ -30,12 +62,48 @@ img {
 
 .presentation2 {
   display: flex;
+  margin-top: 40px;
 
   flex-direction: column;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.presentation2 span:not(:last-child) {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  color: #a4a4a4;
 }
 
-.board {
-  border: 2px solid black;
-  width: 540px;
-  height: 360px;
+/* OFFER CSS */
+
+.annonce {
+  margin: 60px auto;
+  width: 1150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.annonceresume {
+  width: 495px;
+  height: 615px;
+  border: grey solid 2px;
+  display: flex;
+  flex-direction: column;
+}
+/* .annonceresume:last-child {
+  display: flex;
+  align-items: center;
+} */
+.annonceresume button {
+  height: 45px;
+  width: 190px;
+  margin-left: 40px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #37aeb7;
+  color: white;
+  font-size: 16px;
 }

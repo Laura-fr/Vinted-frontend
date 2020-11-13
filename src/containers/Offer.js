@@ -21,36 +21,47 @@ const Offer = () => {
   return isLoading ? (
     <span>En cours de chargement...</span>
   ) : (
-    <div className="annonces">
+    <div className="annonce">
       <div className="annoncepic">
         <img
-          style={{ height: 476, width: 310 }}
+          style={{ height: 600, width: 400 }}
           alt={data.product_name}
           src={data.product_image.url}
         />
       </div>
-      <div className="annonceresume"></div>
+      <div className="annonceresume">
+        <span style={{ marginLeft: 20, marginTop: 20 }}>
+          {data.product_price} €
+        </span>
+        {data.product_details.map((elem, index) => {
+          const keys = Object.keys(elem);
+          console.log(keys);
+          return (
+            <p style={{ marginLeft: 20 }} key={index}>
+              {keys[0]} {elem[keys[0]]}
+            </p>
+          );
+        })}
+        <hr />
+        <span style={{ marginLeft: 20 }}>
+          {data.product_name}
+          <br />
 
-      <span>{data.product_price} €</span>
-      {data.product_details.map((elem, index) => {
-        const keys = Object.keys(elem);
-        console.log(keys);
-        return (
-          <p key={index}>
-            {keys[0]} {elem[keys[0]]}
-          </p>
-        );
-      })}
-      <span>
-        {data.product_name}
+          {data.product_description}
+          <br />
+
+          <img
+            style={{ height: 50, width: 50, borderRadius: 25 }}
+            alt={data.owner.account.username}
+            src={data.owner.account.avatar.url}
+          />
+
+          {data.owner.account.username}
+        </span>
         <br />
-        <img
-          style={{ height: 50, width: 50, borderRadius: 25 }}
-          alt={data.owner.account.username}
-          src={data.owner.account.avatar.url}
-        />
-        {data.owner.account.username}
-      </span>
+
+        <button style={{ marginLeft: 20 }}>Acheter</button>
+      </div>
     </div>
   );
 };

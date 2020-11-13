@@ -1,3 +1,35 @@
 .header {
   height: 65px;
+  margin: 0 auto;
+  width: 1350px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header button {
+  height: 30px;
+  width: 115px;
+  border-radius: 5px;
+  border: 1px #37aeb7 solid;
+  color: #37aeb7;
+  background-color: white;
+  font-size: 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.header img {
+  height: 40px;
+  width: 70px;
+  object-fit: cover;
+}
+.header input {
+  height: 40px;
+  width: 635px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f2f4f5;
+  font-size: 16px;
+  outline: none;
 }
