@@ -107,3 +107,18 @@ img {
   color: white;
   font-size: 16px;
 }
+
+.category {
+  /* color: #a1a1a1; */
+  font-size: 24px;
+}
+
+/* .annonceresume span {
+  display: flex;
+  flex-direction: column;
+} */
+
+.annonceresume span:last-child {
+  display: flex;
+  align-items: center;
+}

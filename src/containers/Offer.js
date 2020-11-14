@@ -30,7 +30,7 @@ const Offer = () => {
         />
       </div>
       <div className="annonceresume">
-        <span style={{ marginLeft: 20, marginTop: 20 }}>
+        <span className="category" style={{ marginLeft: 20, marginTop: 20 }}>
           {data.product_price} €
         </span>
         {data.product_details.map((elem, index) => {
@@ -38,12 +38,13 @@ const Offer = () => {
           console.log(keys);
           return (
             <p style={{ marginLeft: 20 }} key={index}>
-              {keys[0]} {elem[keys[0]]}
+              {keys[0]} : {elem[keys[0]]}
             </p>
           );
         })}
-        <hr />
+
         <span style={{ marginLeft: 20 }}>
+          <hr style={{ marginRight: 20 }} />
           {data.product_name}
           <br />
 
