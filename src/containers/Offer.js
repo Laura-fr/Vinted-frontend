@@ -50,12 +50,15 @@ const Offer = () => {
 
           {data.product_description}
           <br />
-
-          <img
-            style={{ height: 50, width: 50, borderRadius: 25 }}
-            alt={data.owner.account.username}
-            src={data.owner.account.avatar.url}
-          />
+          <div>
+            {data.owner.account.avatar && (
+              <img
+                style={{ height: 50, width: 50, borderRadius: 25 }}
+                alt={data.owner.account.avatar.url}
+                src={data.owner.account.avatar.url}
+              />
+            )}
+          </div>
 
           {data.owner.account.username}
         </span>

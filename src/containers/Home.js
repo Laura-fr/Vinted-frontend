@@ -38,23 +38,25 @@ const Home = () => {
           return (
             <div className="presentation2" key={index}>
               <span>
-                <img
-                  style={{
-                    height: 25,
-                    width: 25,
-                    borderRadius: 25,
-                    marginRight: 10,
-                  }}
-                  alt={offer.owner.account.username}
-                  src={offer.owner.account.avatar.url}
-                />
+                {offer.owner.account.avatar && (
+                  <img
+                    style={{
+                      height: 25,
+                      width: 25,
+                      borderRadius: 25,
+                      marginRight: 10,
+                    }}
+                    alt={offer.owner.account.avatar.url}
+                    src={offer.owner.account.avatar.url}
+                  />
+                )}
                 {offer.owner.account.username}
               </span>
 
               <Link to={`/offer/${offer._id}`}>
                 <img
                   style={{ height: 360, width: 235 }}
-                  alt={offer.product_name}
+                  alt={offer.product_image.url}
                   src={offer.product_image.url}
                 />
               </Link>
