@@ -122,3 +122,61 @@ img {
   display: flex;
   align-items: center;
 }
+
+/* LOGIN */
+
+.login,
+.Signup {
+  margin: 80px auto;
+  width: 1150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login h3,
+.Signup h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.login form,
+.Signup form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.login input,
+.Signup input {
+  margin-bottom: 10px;
+  width: 277px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+
+  border-bottom: #fbced3 solid 1px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+}
+
+.login button,
+.Signup input:last-child {
+  width: 277px;
+  height: 52px;
+  margin-top: 50px;
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  background-color: #37aeb7;
+  color: white;
+  font-size: 16px;
+}

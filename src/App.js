@@ -6,6 +6,7 @@ import Offer from "./containers/Offer";
 import Header from "./components/Header";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
+import Publish from "./containers/Publish";
 import Cookie from "js-cookie";
 
 function App() {
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/offer/:id">
             <Offer />
+          </Route>
+          <Route path="/publish">
+            <Publish />
           </Route>
           <Route path="/">
             <Home />

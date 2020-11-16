@@ -26,7 +26,9 @@ const Header = ({ token, setUser }) => {
           <Link to="/login">
             <button>Se connecter</button>
           </Link>
-          <button>Vends tes articles</button>
+          <Link to="/Publish">
+            <button>Vends tes articles</button>
+          </Link>
         </div>
       )}
     </div>
