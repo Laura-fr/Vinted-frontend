@@ -35,7 +35,7 @@ function App() {
             <Offer />
           </Route>
           <Route path="/publish">
-            <Publish />
+            <Publish token={token} />
           </Route>
           <Route path="/">
             <Home />

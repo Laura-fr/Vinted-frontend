@@ -26,7 +26,7 @@ const Login = ({ setUser }) => {
         alert("Une erreur est survenue");
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response);
     }
   };
   return (
