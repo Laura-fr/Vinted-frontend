@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const Offer = () => {
   const { id } = useParams();
@@ -64,10 +64,14 @@ const Offer = () => {
         </span>
         <br />
 
-        <button style={{ marginLeft: 20 }}>Acheter</button>
+        <Link to="/payment">
+          <button style={{ marginLeft: 20 }}>Acheter</button>
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Offer;
+
+// history.push("/payment", {title: data.title})

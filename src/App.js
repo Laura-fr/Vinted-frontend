@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
 import Publish from "./containers/Publish";
+import Payment from "./containers/Payment";
 import Cookie from "js-cookie";
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
           </Route>
           <Route path="/publish">
             <Publish token={token} />
+          </Route>
+          <Route path="/payment">
+            <Payment token={token} />
           </Route>
           <Route path="/">
             <Home />
