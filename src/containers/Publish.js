@@ -41,7 +41,8 @@ const Publish = ({ token }) => {
     }
   };
   return token ? (
-    <div>
+    <div className="publish">
+      <h3>Vends ton article</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="file"
@@ -63,7 +64,7 @@ const Publish = ({ token }) => {
 
         <textarea
           type="text"
-          placeholder="Décris ton article"
+          placeholder="Décris ton article..."
           value={description}
           onChange={(event) => {
             setDescription(event.target.value);

@@ -17,7 +17,7 @@ code {
 /* HOME CSS */
 
 img {
-  object-fit: cover; /* garde les proportions en couvrant l'intégralité des dimensions `width` et `height` */
+  object-fit: cover;
   object-position: center;
 }
 .board {
@@ -123,7 +123,7 @@ img {
   align-items: center;
 }
 
-/* LOGIN */
+/* LOGIN  ET SIGNUP */
 
 .login,
 .Signup {
@@ -167,7 +167,8 @@ img {
 }
 
 .login button,
-.Signup input:last-child {
+.Signup input:last-child,
+.publish button {
   width: 277px;
   height: 52px;
   margin-top: 50px;
@@ -179,4 +180,45 @@ img {
   background-color: #37aeb7;
   color: white;
   font-size: 16px;
+}
+
+/* PUBLISH */
+
+.publish {
+  margin: 0 auto;
+  width: 1350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.publish form {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 0 30px;
+  background-color: #ebedee;
+  margin-bottom: 100px;
+  align-items: center;
+}
+.publish input {
+  border: none;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.publish textarea {
+  width: 400px;
+  height: 150px;
+  border: none;
+  border-radius: 10px;
+}
+.publish button {
+  margin-bottom: 30px;
 }
