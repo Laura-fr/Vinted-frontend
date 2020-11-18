@@ -26,11 +26,9 @@ const Header = ({ token, setUser }) => {
           <Link to="/signup">
             <button>S'inscrire</button>
           </Link>
+
           <Link to="/login">
             <button>Se connecter</button>
-          </Link>
-          <Link to="/Publish">
-            <button>Vends tes articles</button>
           </Link>
         </div>
       )}
