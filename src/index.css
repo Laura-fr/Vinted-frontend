@@ -222,3 +222,16 @@ img {
 .publish button {
   margin-bottom: 30px;
 }
+
+/* PAYMENT */
+
+.pay {
+  margin: 50px auto;
+  background-color: #ebedee;
+  width: 605px;
+  height: 557px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}

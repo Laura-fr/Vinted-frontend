@@ -64,7 +64,12 @@ const Offer = () => {
         </span>
         <br />
 
-        <Link to="/payment">
+        <Link
+          to={{
+            pathname: "/payment",
+            state: { price: data.product_price },
+          }}
+        >
           <button style={{ marginLeft: 20 }}>Acheter</button>
         </Link>
       </div>
@@ -73,5 +78,3 @@ const Offer = () => {
 };
 
 export default Offer;
-
-// history.push("/payment", {title: data.title})

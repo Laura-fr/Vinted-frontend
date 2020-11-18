@@ -21,7 +21,7 @@ const SignUp = ({ setUser }) => {
         setUser(response.data.token);
         history.push("/");
       } else {
-        alert("une erreur est arrivée !!");
+        alert("une erreur est arrivée 😱");
       }
       // console.log(response.data);
     } catch (error) {
@@ -66,3 +66,5 @@ const SignUp = ({ setUser }) => {
   );
 };
 export default SignUp;
+
+// changer la redirection ici, après s'être connecté l'utilisateur doit retourner sur la page payment et non pas home.
