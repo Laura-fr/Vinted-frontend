@@ -51,3 +51,10 @@ function App() {
 }
 
 export default App;
+
+// - Faire  la page payment au complet
+// - Finir CSS offer et payment
+// - Régler problème de redirection (payment)
+// - Détails CSS : Icone chargement de la page, importer font vinted, importer le plus de détails possible du site...
+// - Bien intégrer la confirmation de commande (modale ?)
+// - Confirmation par mail ?

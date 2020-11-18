@@ -10,6 +10,9 @@ const Header = ({ token, setUser }) => {
         <img alt="logo" src="/logovinted.png" />
       </Link>
       <input type="text" placeholder="  Recherche des articles"></input>
+
+      {/* permet d'afficher le bouter se déconnecter et de cacher les S'inscrire et Se connecter */}
+
       {token ? (
         <button
           onClick={() => {
@@ -31,6 +34,11 @@ const Header = ({ token, setUser }) => {
           </Link>
         </div>
       )}
+      <div>
+        <Link to="/Publish">
+          <button>Vends tes articles</button>
+        </Link>
+      </div>
     </div>
   );
 };
