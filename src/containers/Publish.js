@@ -28,7 +28,7 @@ const Publish = ({ token }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        " https://lereacteur-vinted-api.herokuapp.com/offer/publish",
+        " https://vinted-express.herokuapp.com/offer/publish",
         formData,
 
         {

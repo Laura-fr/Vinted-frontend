@@ -8,7 +8,7 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const fetchData = async () => {
     const response = await axios.get(
-      "https://lereacteur-vinted-api.herokuapp.com/offers"
+      "https://vinted-express.herokuapp.com/offers"
     );
     console.log(response.data);
     setData(response.data);

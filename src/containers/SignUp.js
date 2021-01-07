@@ -13,7 +13,7 @@ const SignUp = ({ setUser }) => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        "https://lereacteur-vinted-api.herokuapp.com/user/signup",
+        "https://vinted-express.herokuapp.com/user/signup",
 
         { username: username, email: email, password: password }
       );

@@ -53,7 +53,8 @@ function App() {
 export default App;
 
 // - Terminer touuuuute la page payment au complet
-// - Ne pas oublier tout les try catch !!!
+// - Ne pas oublier tout les try catch !!
+// - Faire le footer
 // - Finir CSS offer et payment
 // - Régler problèmes de redirection (payment et publish)
 // - Essayer de créer plus de composents pour aléger le code (bouton, etc)
