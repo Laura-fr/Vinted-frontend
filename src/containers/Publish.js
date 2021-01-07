@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Publish = ({ token }) => {
@@ -24,6 +24,8 @@ const Publish = ({ token }) => {
   formData.append("price", price);
   formData.append("picture", file);
 
+  const history = useHistory();
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -35,6 +37,12 @@ const Publish = ({ token }) => {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
+
+      if (response.data._id) {
+        history.push(`/offer/${response.data._id}`);
+      } else {
+        alert("Something happened, try again !");
+      }
       console.log(response.data);
     } catch (error) {
       console.log(error.response);

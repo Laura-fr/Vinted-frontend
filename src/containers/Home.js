@@ -15,7 +15,6 @@ const Home = () => {
     setIsLoading(false);
   };
   useEffect(() => {
-    // console.log("rentre dans le use effect !!!");
     fetchData();
   }, []);
   return isLoading ? (

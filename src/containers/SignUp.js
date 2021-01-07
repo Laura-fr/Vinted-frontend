@@ -21,7 +21,7 @@ const SignUp = ({ setUser }) => {
         setUser(response.data.token);
         history.push("/");
       } else {
-        alert("une erreur est arrivée 😱");
+        alert("something happened 😱");
       }
       // console.log(response.data);
     } catch (error) {
@@ -35,7 +35,7 @@ const SignUp = ({ setUser }) => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Nom d'utilisateur"
+          placeholder="User name"
           value={username}
           onChange={(event) => {
             setUsername(event.target.value);
@@ -44,7 +44,7 @@ const SignUp = ({ setUser }) => {
         <br />
         <input
           type="email"
-          placeholder="Adresse email"
+          placeholder="Email adress"
           value={email}
           onChange={(event) => {
             setEmail(event.target.value);
@@ -53,7 +53,7 @@ const SignUp = ({ setUser }) => {
         <br />
         <input
           type="password"
-          placeholder="Mot de passe"
+          placeholder="Password"
           value={password}
           onChange={(event) => {
             setPassword(event.target.value);
