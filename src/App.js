@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Cookie from "js-cookie";
+
+// containers
 import Home from "./containers/Home";
 import Offer from "./containers/Offer";
-import Header from "./components/Header";
 import SignUp from "./containers/SignUp";
 import Login from "./containers/Login";
 import Publish from "./containers/Publish";
 import Payment from "./containers/Payment";
-import Cookie from "js-cookie";
+
+// components
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [token, setToken] = useState(Cookie.get("userToken") || null);
@@ -45,6 +50,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </Router>
     </div>
   );
@@ -52,9 +58,6 @@ function App() {
 
 export default App;
 
-// - Terminer touuuuute la page payment au complet
-
-// - Faire le footer
 // - Finir CSS offer et payment
 // - Régler problèmes de redirection (payment)
 // - Essayer de créer plus de composants pour aléger le code (bouton, etc)

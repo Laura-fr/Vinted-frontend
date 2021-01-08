@@ -5,18 +5,22 @@ import { loadStripe } from "@stripe/stripe-js";
 
 import Checkpay from "../components/Checkpay";
 
-const stripePromise = loadStripe("pk_test_5z9rSB8XwuAOihoBixCMfL6X");
+const stripePromise = loadStripe(
+  "pk_test_51I6ZamJNrRZfZkKjH4ZIN55c5F0LbVUUWUx6ufNJHiRTBLQmmc1JFjzmX4vCEPfRKWLtw47eAnGunVr9xS6rhghL00bNRrAd2B"
+);
 
 const Payment = ({ token }) => {
   const location = useLocation();
-  const { price } = location.state;
+  const { price, title } = location.state;
 
   return token ? (
     <div className="pay">
       <p>Résumé de la commande</p>
-      <div>Prix du produit : {price}</div>
-      <Elements stripe={stripePromise} />
-      <Checkpay price={price} />
+      <span>{title} </span>
+      <div>Prix du produit : {price} €</div>
+      <Elements stripe={stripePromise}>
+        <Checkpay price={price} title={title} />
+      </Elements>
     </div>
   ) : (
     <Redirect to={{ pathname: "/login", state: { fromPublish: true } }} />

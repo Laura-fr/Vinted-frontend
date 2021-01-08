@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
 }
 
 code {
@@ -55,6 +56,7 @@ img {
   margin: 0 auto;
   width: 1350px;
   display: flex;
+  margin-bottom: 300px;
 
   flex-wrap: wrap;
   justify-content: space-around;
@@ -91,10 +93,7 @@ img {
   display: flex;
   flex-direction: column;
 }
-/* .annonceresume:last-child {
-  display: flex;
-  align-items: center;
-} */
+
 .annonceresume button {
   height: 45px;
   width: 190px;
@@ -109,7 +108,6 @@ img {
 }
 
 .category {
-  /* color: #a1a1a1; */
   font-size: 24px;
 }
 
@@ -233,5 +231,4 @@ img {
   display: flex;
 
   flex-direction: column;
-  align-items: center;
 }

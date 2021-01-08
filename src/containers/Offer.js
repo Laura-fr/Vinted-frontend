@@ -67,7 +67,7 @@ const Offer = () => {
         <Link
           to={{
             pathname: "/payment",
-            state: { price: data.product_price },
+            state: { price: data.product_price, title: data.product_name },
           }}
         >
           <button style={{ marginLeft: 20 }}>Acheter</button>

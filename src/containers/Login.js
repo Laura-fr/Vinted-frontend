@@ -1,9 +1,20 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import axios from "axios";
 
 const Login = ({ setUser }) => {
   const history = useHistory();
+  const location = useLocation();
+
+  // let fromPublish;
+  // if (location.state) {
+  //   fromPublish = true;
+  // } else {
+  //   fromPublish = false;
+  // }
+  // differente écrite pour condtion from publish
+  const fromPublish = location.state?.fromPublish ? true : false; //optional chaining
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -21,7 +32,7 @@ const Login = ({ setUser }) => {
       if (response.data.token) {
         setUser(response.data.token);
 
-        history.push("/");
+        history.push(fromPublish ? "/publish" : "/");
       } else {
         alert("Une erreur est survenue");
       }
