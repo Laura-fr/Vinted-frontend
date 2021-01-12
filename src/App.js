@@ -13,7 +13,7 @@ import Payment from "./containers/Payment";
 
 // components
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
 function App() {
   const [token, setToken] = useState(Cookie.get("userToken") || null);
@@ -50,7 +50,6 @@ function App() {
             <Home />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );

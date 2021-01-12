@@ -15,6 +15,7 @@ const Header = ({ token, setUser }) => {
 
       {token ? (
         <button
+          className="red-button"
           onClick={() => {
             setUser(null);
           }}
@@ -24,17 +25,17 @@ const Header = ({ token, setUser }) => {
       ) : (
         <div>
           <Link to="/signup">
-            <button>S'inscrire</button>
+            <button className="header-button">S'inscrire</button>
           </Link>
 
           <Link to="/login">
-            <button>Se connecter</button>
+            <button className="header-button">Se connecter</button>
           </Link>
         </div>
       )}
       <div>
         <Link to="/Publish">
-          <button>Vends tes articles</button>
+          <button className="header-button">Vends tes articles</button>
         </Link>
       </div>
     </div>

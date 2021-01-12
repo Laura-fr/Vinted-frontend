@@ -50,84 +50,120 @@ const Publish = ({ token }) => {
   };
   return token ? (
     <div className="publish">
-      <h3>Vends ton article</h3>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="file"
-          id="file"
-          className="file"
-          onChange={(event) => {
-            setFile(event.target.files[0]);
-          }}
-        />
+      <div className="publish-container">
+        <h2>Vends ton article</h2>
+        <form className="publish-form" onSubmit={handleSubmit}>
+          <div className="input-file-div-container">
+            <div className="input-file-div">
+              <label htmlFor="file">+</label>{" "}
+              <label htmlFor="file">Ajouter une image</label>
+              <input
+                type="file"
+                id="file"
+                className="input-file"
+                onChange={(event) => {
+                  setFile(event.target.files[0]);
+                }}
+              />
+            </div>
+          </div>
 
-        <input
-          type="text"
-          placeholder="Titre"
-          value={title}
-          onChange={(event) => {
-            setTitle(event.target.value);
-          }}
-        />
-
-        <textarea
-          type="text"
-          placeholder="Décris ton article..."
-          value={description}
-          onChange={(event) => {
-            setDescription(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Marque"
-          value={brand}
-          onChange={(event) => {
-            setBrand(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Taille"
-          value={size}
-          onChange={(event) => {
-            setSize(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Couleur"
-          value={color}
-          onChange={(event) => {
-            setColor(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Etat"
-          value={condition}
-          onChange={(event) => {
-            setCondition(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Lieu"
-          value={city}
-          onChange={(event) => {
-            setCity(event.target.value);
-          }}
-        />
-        <input
-          type="text"
-          placeholder="Prix"
-          value={price}
-          onChange={(event) => {
-            setPrice(event.target.value);
-          }}
-        />
-        <button type="submit">Ajouter</button>
-      </form>
+          <div className="input-file-div-container-c">
+            <h3>Titre</h3>
+            <input
+              type="text"
+              placeholder="ex : Chemise blanche"
+              value={title}
+              onChange={(event) => {
+                setTitle(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-b">
+            <h3>Décris ton article</h3>
+            <textarea
+              style={{ width: "40%" }}
+              type="text"
+              rows="5"
+              placeholder="ex : Très belle chemise, portée assez souvent mais qui reste dans un très bon état..."
+              className="textarea"
+              value={description}
+              onChange={(event) => {
+                setDescription(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Marque</h3>
+            <input
+              type="text"
+              placeholder="ex : Zara"
+              value={brand}
+              onChange={(event) => {
+                setBrand(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Taille</h3>
+            <input
+              type="text"
+              placeholder="ex : 36/S"
+              value={size}
+              onChange={(event) => {
+                setSize(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Couleur</h3>
+            <input
+              type="text"
+              placeholder="ex : Blanche"
+              value={color}
+              onChange={(event) => {
+                setColor(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Condition</h3>
+            <input
+              type="text"
+              placeholder="ex: Très bon état"
+              value={condition}
+              onChange={(event) => {
+                setCondition(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Ville</h3>
+            <input
+              type="text"
+              placeholder="ex : Paris"
+              value={city}
+              onChange={(event) => {
+                setCity(event.target.value);
+              }}
+            />
+          </div>
+          <div className="input-file-div-container-c">
+            <h3>Prix</h3>
+            <input
+              type="text"
+              placeholder="0.00 €"
+              value={price}
+              onChange={(event) => {
+                setPrice(event.target.value);
+              }}
+            />
+          </div>
+          <div style={{ display: "flex", flexDirection: "row-reverse" }}>
+            <button type="submit">Ajouter</button>
+          </div>
+        </form>
+      </div>
     </div>
   ) : (
     <Redirect to={{ pathname: "/login", state: { fromPublish: true } }} />

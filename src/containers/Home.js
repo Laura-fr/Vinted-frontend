@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import pic from "../assets/img/boardpic.jpeg";
 import axios from "axios";
+import Loading from "../components/Loading";
 
 const Home = () => {
   const [data, setData] = useState({});
@@ -18,7 +19,7 @@ const Home = () => {
     fetchData();
   }, []);
   return isLoading ? (
-    <span>En cours de chargement...</span>
+    <Loading />
   ) : (
     <div>
       <img

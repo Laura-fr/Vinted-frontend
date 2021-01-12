@@ -23,7 +23,7 @@ const Payment = ({ token }) => {
       </Elements>
     </div>
   ) : (
-    <Redirect to={{ pathname: "/login", state: { fromPublish: true } }} />
+    <Redirect to={{ pathname: "/login" }} />
   );
 };
 

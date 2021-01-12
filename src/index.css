@@ -79,25 +79,38 @@ img {
 
 /* OFFER CSS */
 
-.annonce {
-  margin: 60px auto;
-  width: 1150px;
+.offer-page {
+  background-color: #eaedee;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.annonceresume {
-  width: 495px;
-  height: 615px;
-  border: grey solid 2px;
+.offer-pic {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  background-color: white;
+  height: 670px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.offer-resume {
+  width: 510px;
+  background-color: white;
   display: flex;
   flex-direction: column;
+  margin: 90px;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.annonceresume button {
+.offer-resume button {
   height: 45px;
   width: 190px;
-  margin-left: 40px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -107,16 +120,52 @@ img {
   font-size: 16px;
 }
 
-.category {
-  font-size: 24px;
+.offer-button {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .annonceresume span {
-  display: flex;
-  flex-direction: column;
-} */
+.offer-resume h2 {
+  font-weight: normal;
+  font-size: 30px;
+}
+.offer-resume h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+}
 
-.annonceresume span:last-child {
+.info {
+  display: flex;
+}
+
+.info1 {
+  color: #b4b4b4;
+  font-size: 20px;
+}
+
+.info2 {
+  color: #666666;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.offer-resume-part2 {
+  border-top: #e7e7e7 2px solid;
+}
+.offer-resume-part2 span {
+  color: #666666;
+  font-size: 17px;
+}
+
+.offer-resume-part2 img {
+  width: 90px;
+  height: 90px;
+}
+
+.user-info {
   display: flex;
   align-items: center;
 }
@@ -183,32 +232,96 @@ img {
 /* PUBLISH */
 
 .publish {
-  margin: 0 auto;
-  width: 1350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ebedee;
 }
 
-.publish form {
-  border-radius: 20px;
+.publish-form {
   display: flex;
   flex-direction: column;
-  width: 600px;
-  padding: 0 30px;
-  background-color: #ebedee;
-  margin-bottom: 100px;
-  align-items: center;
 }
-.publish input {
+.publish-container {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+.publish h2 {
+  font-weight: normal;
+}
+.publish h3 {
+  font-weight: normal;
+}
+
+.publish-form input {
+  height: 50px;
+  width: 40%;
+  font-size: 19px;
   border: none;
-  margin: 30px 0;
+  border-bottom: 2px solid #eeefef;
+  outline: none;
+  font-size: 18px;
+}
+
+.publish-form input::placeholder {
+  color: #cacdcffa;
+}
+
+.input-file {
+  visibility: hidden;
+}
+.input-file-div {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  height: 50px;
+  width: 200px;
+  box-sizing: border-box;
+  background-color: white;
+  border: #37aeb7 1px solid;
+  color: #37aeb7;
+  border-radius: 5px;
+}
+
+.input-file-div-container {
+  height: 250px;
   display: flex;
   align-items: center;
-  height: 40px;
-  width: 400px;
-  border-radius: 5px;
+  justify-content: center;
+  background-color: white;
+  border: #cbcdcd solid 1px;
+}
+.input-file-div-container-b {
+  height: 250px;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: white;
+  border: #cbcdcd solid 1px;
+}
+
+.input-file-div-container-c {
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  border: #cbcdcd solid 1px;
+  background-color: white;
+}
+
+.textarea {
+  outline: none;
+
+  font-family: Arial;
+  font-size: 18px;
+}
+
+.textarea::placeholder {
+  color: #cacdcffa;
 }
 
 .publish textarea {

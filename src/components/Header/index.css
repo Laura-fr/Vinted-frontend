@@ -11,12 +11,21 @@
   height: 30px;
   width: 115px;
   border-radius: 5px;
-  border: 1px #37aeb7 solid;
-  color: #37aeb7;
-  background-color: white;
   font-size: 12px;
   outline: none;
   cursor: pointer;
+  margin-right: 20px;
+}
+.header-button {
+  border: 1px #37aeb7 solid;
+  color: #37aeb7;
+  background-color: white;
+}
+
+.red-button {
+  background-color: #c2175b;
+  border: none;
+  color: white;
 }
 
 .header img {
