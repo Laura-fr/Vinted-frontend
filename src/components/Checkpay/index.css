@@ -1,0 +1,13 @@
+/* CHECK PAY CSS */
+
+.checkpay-button {
+  background-color: #3ebb6a;
+  border-radius: 5px;
+  height: 50px;
+  width: 100%;
+  color: white;
+  font-size: 17px;
+  border: none;
+  margin-top: 50px;
+  cursor: pointer;
+}

@@ -40,11 +40,15 @@ const Checkpay = ({ title, price }) => {
   return (
     <div>
       {completed ? (
-        <p>Paiement effectué !</p>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <p>Paiement effectué ! 🎉</p>
+        </div>
       ) : (
         <form onSubmit={handleSubmit}>
           <CardElement />
-          <button type="submit">Acheter</button>
+          <button className="checkpay-button" type="submit">
+            Acheter
+          </button>
         </form>
       )}
     </div>

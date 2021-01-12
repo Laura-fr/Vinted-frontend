@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%;
+  cursor: default;
 }
 
 code {
@@ -106,6 +106,7 @@ img {
   border-radius: 10px;
   padding: 20px;
   box-sizing: border-box;
+  margin-bottom: 150px;
 }
 
 .offer-resume button {
@@ -175,10 +176,15 @@ img {
 .login,
 .Signup {
   margin: 80px auto;
+
   width: 1150px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.login {
+  margin-bottom: 400px;
 }
 
 .login h3,
@@ -331,17 +337,55 @@ img {
   border-radius: 10px;
 }
 .publish button {
-  margin-bottom: 30px;
+  margin-bottom: 150px;
 }
 
 /* PAYMENT */
 
-.pay {
-  margin: 50px auto;
+.payment-page {
   background-color: #ebedee;
-  width: 605px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #eaeaea 1px solid;
+  margin-bottom: 30px;
+}
+.order-resume {
+  color: #6e6e6e;
+}
+
+.total-resume {
+  border-bottom: #eaeaea 1px solid;
+  margin-bottom: 30px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-info {
+  margin-bottom: 20px;
+}
+
+.total p {
+  color: black;
+  font-weight: bold;
+}
+
+.payment {
+  padding: 30px;
+  box-sizing: border-box;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  background-color: white;
+  width: 35%;
   height: 557px;
   display: flex;
-
   flex-direction: column;
 }
