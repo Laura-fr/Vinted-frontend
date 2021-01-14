@@ -26,57 +26,59 @@ const Offer = () => {
     <Loading />
   ) : (
     <div className="offer-page">
-      <div className="offer-pic">
-        <img
-          style={{ height: 650, width: 430 }}
-          alt={data.product_name}
-          src={data.product_image.url}
-        />
-      </div>
-      <div className="offer-resume">
-        <div className="offer-resume-part1">
-          <h2>{data.product_price} €</h2>
-          {data.product_details.map((elem, index) => {
-            const keys = Object.keys(elem);
-            console.log(keys);
-            return (
-              <div className="info" key={index}>
-                <p className="info1">{keys[0]} : </p>
-                <p className="info2">{elem[keys[0]]}</p>
-              </div>
-            );
-          })}
+      <div className="offer-container">
+        <div className="offer-pic">
+          <img
+            style={{ height: 650, width: 430 }}
+            alt={data.product_name}
+            src={data.product_image.url}
+          />
         </div>
+        <div className="offer-resume">
+          <div className="offer-resume-part1">
+            <h2>{data.product_price} €</h2>
+            {data.product_details.map((elem, index) => {
+              const keys = Object.keys(elem);
+              console.log(keys);
+              return (
+                <div className="info" key={index}>
+                  <p className="info1">{keys[0]} : </p>
+                  <p className="info2">{elem[keys[0]]}</p>
+                </div>
+              );
+            })}
+          </div>
 
-        <div className="offer-resume-part2">
-          <h3>{data.product_name}</h3>
+          <div className="offer-resume-part2">
+            <h3>{data.product_name}</h3>
 
-          <span>{data.product_description}</span>
+            <span>{data.product_description}</span>
 
-          <div>
-            {/* {data.owner.account.avatar && (
+            <div>
+              {/* {data.owner.account.avatar && (
               <img
                 style={{ height: 50, width: 50, borderRadius: 25 }}
                 alt={data.owner.account.avatar.url}
                 src={data.owner.account.avatar.url}
               />
             )} Dans le cas : image profile user  */}
-          </div>
-          <div className="user-info">
-            <img src={avatar} alt="avatar" />
+            </div>
+            <div className="user-info">
+              <img src={avatar} alt="avatar" />
 
-            <p>{data.owner.account.username}</p>
+              <p>{data.owner.account.username}</p>
+            </div>
           </div>
-        </div>
-        <div className="offer-button">
-          <Link
-            to={{
-              pathname: "/payment",
-              state: { price: data.product_price, title: data.product_name },
-            }}
-          >
-            <button>Acheter</button>
-          </Link>
+          <div className="offer-button">
+            <Link
+              to={{
+                pathname: "/payment",
+                state: { price: data.product_price, title: data.product_name },
+              }}
+            >
+              <button>Acheter</button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -82,6 +82,10 @@ img {
   justify-content: space-around;
 }
 
+.offer-container {
+  display: flex;
+}
+
 .offer-pic {
   margin-top: 90px;
   margin-bottom: 90px;

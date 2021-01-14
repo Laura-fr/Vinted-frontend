@@ -58,10 +58,7 @@ function App() {
 
 export default App;
 
-// - Finir CSS offer et payment
 // - Régler problèmes de redirection (payment)
 // - Essayer de créer plus de composants pour aléger le code (bouton, etc)
 // - CSS : faire le responsive
-// - Détails CSS : Icone chargement de la page, importer font vinted, importer le plus de détails possible du site...
-// - Bien intégrer la confirmation de commande lors du paiement (modale ?)
-// - Confirmation par mail ?
+// - Détails CSS : effet déchiré
