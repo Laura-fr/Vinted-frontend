@@ -22,5 +22,5 @@ React, axios, js-cookie, react-router-dom, NodeJS, cloudinary, cors, crypto-js, 
 
 ## Demo
 
-- Account access ▻  Admin : test-user@gmail.com // Password : testuser
-- Payment test  ▻  Card number : 4242 4242 4242 4242 // Expiry date : 04/24 // CVC : 242 // Postal code : 42424
+- Account access ▻  Admin : test-user@gmail.com || Password : testuser
+- Payment test  ▻  Card number : 4242 4242 4242 4242 || Expiry date : 04/24 || CVC : 242 || Postal code : 42424
