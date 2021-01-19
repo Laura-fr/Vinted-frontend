@@ -28,11 +28,7 @@ const Offer = () => {
     <div className="offer-page">
       <div className="offer-container">
         <div className="offer-pic">
-          <img
-            style={{ height: 650, width: 430 }}
-            alt={data.product_name}
-            src={data.product_image.url}
-          />
+          <img alt={data.product_name} src={data.product_image.url} />
         </div>
         <div className="offer-resume">
           <div className="offer-resume-part1">

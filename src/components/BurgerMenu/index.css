@@ -1,0 +1,14 @@
+.burger-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .burger-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: #37aeb7;
+    outline: none;
+    cursor: pointer;
+  }
+}

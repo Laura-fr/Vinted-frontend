@@ -22,11 +22,7 @@ const Home = () => {
     <Loading />
   ) : (
     <div>
-      <img
-        style={{ height: 615, width: "100%", marginBottom: 10 }}
-        alt="pic"
-        src={pic}
-      />
+      <img alt="pic" src={pic} className="board-pic" />
 
       <div className="board">
         <p>Prêt à faire du tri dans vos placards ?</p>
@@ -57,7 +53,7 @@ const Home = () => {
 
               <Link to={`/offer/${offer._id}`}>
                 <img
-                  style={{ height: 360, width: 235 }}
+                  className="main-home-pics"
                   alt={offer.product_image.url}
                   src={offer.product_image.url}
                 />

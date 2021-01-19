@@ -21,6 +21,12 @@ img {
   object-fit: cover;
   object-position: center;
 }
+.board-pic {
+  height: 615px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .board {
   width: 400px;
   height: 260px;
@@ -74,6 +80,11 @@ img {
   color: #a4a4a4;
 }
 
+.main-home-pics {
+  height: 360px;
+  width: 235px;
+}
+
 /* OFFER CSS */
 
 .offer-page {
@@ -96,6 +107,10 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+}
+.offer-pic img {
+  height: 670px;
+  width: 450px;
 }
 
 .offer-resume {
@@ -177,7 +192,7 @@ img {
 .login,
 .Signup {
   margin: 80px auto;
-  width: 1150px;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -385,4 +400,83 @@ img {
   height: 557px;
   display: flex;
   flex-direction: column;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1497px) {
+  /* PAYMENT */
+  .payment {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* PAYMENT */
+  .payment {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* HOME */
+  .board {
+    display: none;
+  }
+  .board-pic {
+    height: 315px;
+  }
+
+  .presentation {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    overflow-x: scroll;
+    width: 90%;
+  }
+
+  .presentation2 {
+    width: calc(100% / 3 - (40px / 3));
+    display: flex;
+    margin-right: 10px;
+  }
+
+  .main-home-pics {
+    height: 260px;
+    width: 160px;
+  }
+
+  /* OFFER */
+
+  .offer-pic img {
+    height: 470px;
+    width: 350px;
+  }
+  .offer-pic {
+    height: 470px;
+    width: 350px;
+  }
+  .offer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  /* SING IN / UP  */
+
+  .login button,
+  .Signup input:last-child {
+    width: 250px;
+    height: 50px;
+  }
+
+  /* PUBLISH */
+  .publish-container {
+    width: 80%;
+  }
+
+  /* PAYMENT */
+
+  .payment {
+    width: 90%;
+  }
 }

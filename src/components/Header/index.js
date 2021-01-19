@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Search } from "react-feather";
+import BurgerMenu from "../BurgerMenu";
 
 import "./index.css";
 
 const Header = ({ token, setUser }) => {
   return (
     <div className="header">
+      <div>
+        <Search className="search" />
+      </div>
       <Link to="/">
         <img alt="logo" src="/logovinted.png" />
       </Link>
@@ -37,6 +42,9 @@ const Header = ({ token, setUser }) => {
         <Link to="/Publish">
           <button className="header-button">Vends tes articles</button>
         </Link>
+      </div>
+      <div>
+        <BurgerMenu />
       </div>
     </div>
   );

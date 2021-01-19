@@ -8,8 +8,8 @@ const Loading = () => {
       className="loader"
       type="Rings"
       color="#38B2BB"
-      height={500}
-      width={500}
+      height={200}
+      width={200}
       timeout={5000} //5 seconds
     />
   );
