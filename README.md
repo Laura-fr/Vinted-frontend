@@ -24,3 +24,6 @@ React, axios, js-cookie, react-router-dom, NodeJS, cloudinary, cors, crypto-js, 
 
 - Account access ▻  Admin : test-user@gmail.com || Password : testuser
 - Payment test  ▻  Card number : 4242 4242 4242 4242 || Expiry date : 04/24 || CVC : 242 || Postal code : 42424
+
+(If you want to add a new item, please, be consistent by putting real clothes informations and pic, thank you 🙏) 
+
