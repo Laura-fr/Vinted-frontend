@@ -461,6 +461,9 @@ img {
     justify-content: center;
     align-items: center;
   }
+  .offer-resume {
+    width: 80%;
+  }
   /* SING IN / UP  */
 
   .login button,
