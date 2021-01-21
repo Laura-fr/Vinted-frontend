@@ -48,6 +48,7 @@ const Publish = ({ token }) => {
       console.log(error.response);
     }
   };
+
   return token ? (
     <div className="publish">
       <div className="publish-container">

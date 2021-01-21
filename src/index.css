@@ -15,12 +15,13 @@ code {
     monospace;
 }
 
-/* HOME CSS */
-
 img {
   object-fit: cover;
   object-position: center;
 }
+
+/* HOME CSS */
+
 .board-pic {
   height: 615px;
   width: 100%;
@@ -40,10 +41,12 @@ img {
   justify-content: center;
   font-size: 34px;
 }
+
 .board p {
   margin-left: 40px;
   margin-top: 10px;
 }
+
 .board button {
   height: 45px;
   width: 190px;
@@ -73,6 +76,7 @@ img {
   justify-content: space-between;
   font-size: 12px;
 }
+
 .presentation2 span:not(:last-child) {
   display: flex;
   margin-bottom: 10px;
@@ -108,6 +112,7 @@ img {
   align-items: center;
   border-radius: 10px;
 }
+
 .offer-pic img {
   height: 670px;
   width: 450px;
@@ -148,6 +153,7 @@ img {
   font-weight: normal;
   font-size: 30px;
 }
+
 .offer-resume h3 {
   font-weight: bold;
   font-size: 18px;
@@ -172,6 +178,7 @@ img {
 .offer-resume-part2 {
   border-top: #e7e7e7 2px solid;
 }
+
 .offer-resume-part2 span {
   color: #666666;
   font-size: 17px;
@@ -238,7 +245,6 @@ img {
   width: 277px;
   height: 52px;
   margin-top: 50px;
-
   border: none;
   border-radius: 5px;
   outline: none;
@@ -262,14 +268,17 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 .publish-container {
   width: 65%;
   display: flex;
   flex-direction: column;
 }
+
 .publish h2 {
   font-weight: normal;
 }
+
 .publish h3 {
   font-weight: normal;
 }
@@ -291,6 +300,7 @@ img {
 .input-file {
   visibility: hidden;
 }
+
 .input-file-div {
   padding: 10px;
   text-align: center;
@@ -312,6 +322,7 @@ img {
   background-color: white;
   border: #cbcdcd solid 1px;
 }
+
 .input-file-div-container-b {
   height: 250px;
   display: flex;
@@ -367,6 +378,7 @@ img {
   border-bottom: #eaeaea 1px solid;
   margin-bottom: 30px;
 }
+
 .order-resume {
   color: #6e6e6e;
 }
@@ -403,6 +415,7 @@ img {
 }
 
 /* MEDIA QUERIES */
+
 @media (max-width: 1497px) {
   /* PAYMENT */
   .payment {
@@ -422,6 +435,7 @@ img {
   .board {
     display: none;
   }
+
   .board-pic {
     height: 315px;
   }
@@ -451,19 +465,23 @@ img {
     height: 470px;
     width: 350px;
   }
+
   .offer-pic {
     height: 470px;
     width: 350px;
   }
+
   .offer-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
+
   .offer-resume {
     width: 80%;
   }
+
   /* SING IN / UP  */
 
   .login button,
@@ -473,6 +491,7 @@ img {
   }
 
   /* PUBLISH */
+
   .publish-container {
     width: 80%;
   }

@@ -38,6 +38,7 @@
   width: 70px;
   object-fit: cover;
 }
+
 .header input {
   height: 40px;
   width: 635px;
@@ -65,6 +66,7 @@
   .header img {
     display: none;
   }
+
   .header input {
     display: none;
   }
@@ -77,6 +79,7 @@
   .header {
     width: 100%;
   }
+
   .search {
     display: block;
     color: #37aeb7;

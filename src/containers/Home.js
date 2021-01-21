@@ -18,6 +18,7 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
   return isLoading ? (
     <Loading />
   ) : (

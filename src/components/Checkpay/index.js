@@ -25,8 +25,8 @@ const Checkpay = ({ title, price }) => {
     const response = await axios.post(
       "https://vinted-express.herokuapp.com/payment",
       {
+        title,
         token: stripeToken,
-        title: title,
         amount: price,
       }
     );

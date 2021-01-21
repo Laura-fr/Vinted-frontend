@@ -1,9 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-
 import Loading from "../components/Loading";
-
 import avatar from "../assets/img/avatar.png";
 
 const Offer = () => {
@@ -22,6 +20,7 @@ const Offer = () => {
     };
     fetchData();
   }, [id]);
+
   return isLoading ? (
     <Loading />
   ) : (
@@ -50,15 +49,6 @@ const Offer = () => {
 
             <span>{data.product_description}</span>
 
-            <div>
-              {/* {data.owner.account.avatar && (
-              <img
-                style={{ height: 50, width: 50, borderRadius: 25 }}
-                alt={data.owner.account.avatar.url}
-                src={data.owner.account.avatar.url}
-              />
-            )} Dans le cas : image profile user  */}
-            </div>
             <div className="user-info">
               <img src={avatar} alt="avatar" />
 

@@ -6,14 +6,18 @@ const Login = ({ setUser }) => {
   const history = useHistory();
   const location = useLocation();
 
+  // Différentes écritures pour const fromPublish :
+
   // let fromPublish;
   // if (location.state) {
   //   fromPublish = true;
   // } else {
   //   fromPublish = false;
   // }
-  // differente écrite pour condtion from publish
-  const fromPublish = location.state?.fromPublish ? true : false; //optional chaining
+
+  // const fromPublish = location.state?.fromPublish ? true : false; //optional chaining
+
+  const fromPublish = !!location.state?.fromPublish;
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,8 +28,8 @@ const Login = ({ setUser }) => {
       const response = await axios.post(
         "https://vinted-express.herokuapp.com/user/login",
         {
-          email: email,
-          password: password,
+          email,
+          password,
         }
       );
 
@@ -37,9 +41,13 @@ const Login = ({ setUser }) => {
         alert("Une erreur est survenue");
       }
     } catch (error) {
+      if (error.response.status === 401 || error.response.status === 400) {
+        alert("Email et/ou mot de passe incorrect");
+      }
       console.log(error.response);
     }
   };
+
   return (
     <div className="login">
       <h3>Se connecter</h3>

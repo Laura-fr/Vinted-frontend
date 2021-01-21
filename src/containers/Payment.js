@@ -2,7 +2,6 @@ import React from "react";
 import { Redirect, useLocation } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-
 import Checkpay from "../components/Checkpay";
 
 const stripePromise = loadStripe(
@@ -50,5 +49,3 @@ const Payment = ({ token }) => {
 };
 
 export default Payment;
-
-// changer la redirection, après s'être connecté l'utilisateur doit retourner sur la page payment et non pas home.

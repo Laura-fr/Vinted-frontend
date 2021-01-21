@@ -15,7 +15,7 @@ const SignUp = ({ setUser }) => {
       const response = await axios.post(
         "https://vinted-express.herokuapp.com/user/signup",
 
-        { username: username, email: email, password: password }
+        { username, email, password }
       );
       if (response.data.token) {
         setUser(response.data.token);
@@ -23,7 +23,6 @@ const SignUp = ({ setUser }) => {
       } else {
         alert("something happened 😱");
       }
-      // console.log(response.data);
     } catch (error) {
       console.log(error.message);
     }
@@ -68,5 +67,3 @@ const SignUp = ({ setUser }) => {
   );
 };
 export default SignUp;
-
-// changer la redirection ici, après s'être connecté l'utilisateur doit retourner sur la page payment et non pas home.

@@ -58,7 +58,8 @@ function App() {
 
 export default App;
 
-// - Régler problèmes de redirection (payment)
+// - Régler problèmes de redirection (payment) :
+// changer la redirection, après s'être connecté l'utilisateur doit retourner sur la page payment et non pas home.
 // - Essayer de créer plus de composants pour aléger le code (bouton, etc)
 // - CSS : faire le responsive
 // - Détails CSS : effet déchiré
